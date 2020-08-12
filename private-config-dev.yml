@@ -1,6 +1,23 @@
-spring:
-  datasource:
-    # 下面的字符都是经过jce加密
-    url: '{cipher}'ba4db99613c884825d6f94a04ce372d40df25da95cb4928f0cb16bac30a225846696d964371469ff0fb94b4bc1ce8be5cc15323571158ad8b504c33a16ba74fe781f5c0d35188f1e921984b8bc9af8a763386bcb16df190178af5742a859e554014c30a02e39a1d3e8ef791f8aa84d6289604f65da9b8c558b3f6b0400314f28
-    username: '{cipher}'57973c2ae1d3ffaf5238bbcf6efacbd32b832e666c18236da33836af82073cbb
-    password: '{cipher}'2985131e075e9be2a2f98ccd68a29e8028074c70a6ed813f46b50476840b4812
+
+mysql:
+  # 下面的字符都是经过jce加密
+  url: '{cipher}'ba4db99613c884825d6f94a04ce372d40df25da95cb4928f0cb16bac30a225846696d964371469ff0fb94b4bc1ce8be5cc15323571158ad8b504c33a16ba74fe781f5c0d35188f1e921984b8bc9af8a763386bcb16df190178af5742a859e554014c30a02e39a1d3e8ef791f8aa84d6289604f65da9b8c558b3f6b0400314f28
+  username: '{cipher}'57973c2ae1d3ffaf5238bbcf6efacbd32b832e666c18236da33836af82073cbb
+  password: '{cipher}'2985131e075e9be2a2f98ccd68a29e8028074c70a6ed813f46b50476840b4812
+  
+userservice:
+  registration:
+    disabled: true
+
+
+# actuator
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
