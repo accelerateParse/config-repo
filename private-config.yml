@@ -1,5 +1,0 @@
-spring:
-  datasource:
-    url: '{cipher}'jdbc:mysql://106.54.210.56:3306/test?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
-    username: '{cipher}'root
-    password: '{cipher}'19971124
